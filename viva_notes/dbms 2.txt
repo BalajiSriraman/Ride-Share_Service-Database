@@ -1,0 +1,113 @@
+What is Normalization?
+Normalization is the process of organizing the data in the database.
+is used to minimize the redundancy from a relation or set of relations. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
+
+Normalization divides the larger table into smaller and links them using relationships.
+
+
+
+data chat:
+First Normal Form (1NF)
+A relation will be 1NF if it contains an atomic value.
+It states that an attribute of a table cannot hold multiple values. It must hold only single-valued attribute.
+First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+Second Normal Form (2NF)
+In the 2NF, relational must be in 1NF.
+In the second normal form, all non-key attributes are fully functional dependent on the primary key
+Third Normal Form (3NF)
+A relation will be in 3NF if it is in 2NF and not contain any transitive partial dependency.
+3NF is used to reduce the data duplication. It is also used to achieve the data integrity.
+
+
+
+explainsation 
+
+To normalize the given data for the best and optimized performance, we should follow the principles of database normalization up to at least 3NF. Let's analyze and normalize each table:
+
+ First Normal Form (1NF)
+2. Second Normal Form (2NF)
+3. Third Normal Form (3NF) 
+4. Boyce-Codd Normal Form (BCNF)
+5. Fourth Normal Form (4NF)
+6. Fifth Normal Form (5NF) 
+
+1f
+
+
+the relation is in first normal form if it does not contain any composite or multi-valued attribute.
+
+A table is in 1 NF if: 
+
+There is a unique name for every Attribute/Column or  contains an atomic value.
+
+First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+
+
+The order in which data is stored does not matter. 
+Driver Table:
+
+DriverId (Primary Key)
+Name
+PhoneNo
+DriverRating
+Here, we can assume that DriverId is unique for each driver, and DriverRating is a single-valued attribute. So, it is already in 1NF.
+
+Now, for the 2NF and 3NF:
+
+No partial dependencies are observed in this table.
+The only candidate key is DriverId which is also the primary key.
+Therefore, the Driver table is already in 2NF and 3NF.
+
+RIDE Table:
+
+RideID (Primary Key)
+DriverId (Foreign Key)
+UserId (Foreign Key)
+Price (Derived Attribute)
+RideStartTime
+RideEndTime
+PickupLocation
+DropoffLocation
+RideStatus
+In the Ride table, the Price attribute is derived and should not be stored. It can be calculated when needed. Therefore, we remove it from this table.
+
+Now, for the 1NF:
+
+DriverId and UserId are foreign keys, which are single-valued attributes, so the table is already in 1NF.
+For the 2NF and 3NF:
+
+No partial dependencies are observed in this table.
+The primary key is RideID, which is unique for each ride.
+The columns DriverId and UserId are dependent only on the primary key RideID.
+Therefore, the Ride table is already in 2NF and 3NF.
+
+Payment Table:
+
+PaymentID (Primary Key)
+PaymentMethod
+PaymentStatus
+Price (Foreign Key)
+RiderId (Foreign Key)
+In the Payment table, the Price attribute is a foreign key referencing another table, which is not a good practice. The payment amount should be stored within the Payment table itself. So, we remove the foreign key reference to Price.
+
+Now, for the 1NF:
+
+Price and RiderId are foreign keys, which are single-valued attributes, so the table is already in 1NF.
+For the 2NF and 3NF:
+
+No partial dependencies are observed in this table.
+The primary key is PaymentID, which is unique for each payment.
+The columns Price and RiderId are dependent only on the primary key PaymentID.
+Therefore, the Payment table is already in 2NF and 3NF.
+
+User Table:
+
+UserId (Primary Key)
+Email
+Name
+Password
+PhoneNumber
+Role
+For the User table, there are no multi-valued attributes or composite attributes, so it is already in 1NF, 2NF, and 3NF.
+
+In summary, the given data is already in at least 2NF and 3NF after removing the derived attribute and making some adjustments in the Payment table to store payment amounts directly. The tables appear to be well-structured for optimized performance.

@@ -1,0 +1,37 @@
+Partial dependency
+partial dependency is a situation in database design where non-key attributes depend on only a part of the primary key, and it is important to identify and eliminate it through normalization to prevent data anomalies and redundancy.
+
+2nd Normal Form (2NF):
+
+Eliminate Partial
+Functional
+Dependency
+
+
+A table is in 2NF if it meets the following conditions:
+
+It is in 1NF (no repeating groups or arrays).
+All non-key attributes (columns) are fully functionally dependent on the entire primary key.
+
+ex
+
+The "Driver" table is in 2NF because all the non-key attributes (DriverRating, Name, PhoneNo, VehicleInfo) are fully functionally dependent on the primary key (DriverId).
+
+The "Ride" table is also in 2NF because all the non-key attributes (Price, RideEndTime, RideStartTime, RideStatus, PickupLocation, DropoffLocation) are fully functionally dependent on the primary key (RideId).
+
+
+
+3d Normal Form (3NF):
+
+Eliminate
+Transitive
+Dependency
+
+
+A table is in 3NF if it meets the following conditions:
+
+It is in 2NF.
+It does not have transitive dependencies, meaning that non-key attributes are not dependent on other non-key attributes.
+
+
+The "Payment" table is in 3NF because there are no transitive dependencies among its non-key attributes.

@@ -1,0 +1,28 @@
+DDL, or Data Definition Language,
+
+It simply handles database schema descriptions and is used to construct and modify the structure of database objects .
+
+DDL refers to a set of SQL instructions for creating, modifying, and deleting database structures, but not data.
+
+A general user, whos accessing the database
+ should not execute these instructions. All DDL commands are auto-committed, which means they store all database changes permanently
+
+CREATE Command:  The database or its objects are created with this command
+There are two types of CREATE statements in SQL, one is for the creation of a database and the other for a table.
+
+DROP Command: The DROP command can be used to delete a whole database or simply a table that means entire data will also be deleted.
+
+ALTER Command: In an existing table, this command is used to add, delete/drop, or edit columns. It can also be used to create and remove constraints from a table that already exists.
+
+TRUNCATE Command: used to indicate the table’s extents for deallocation (empty for reuse). This procedure removes all data from a table quickly.
+
+
+SERIAL is a data type in PostgreSQL that is used for auto-incrementing integer values. It is often used for primary key columns to ensure each row has a unique identifier.
+
+
+VARCHAR(255) is a variable-length character string data type with a maximum length of 255 characters. It's commonly used to store textual data
+
+NOT NULL specifies that this column must have a value for every row, meaning it cannot be left empty (null).
+
+The Role column in your SQL table is used to specify the role or permission level of a user. This role can be used for various purposes, such as access control, defining what actions or features a user can access within an application, or indicating the user's position or responsibilities within an organization. The specific use of the Role column will depend on the context and requirements of your application or database.
+

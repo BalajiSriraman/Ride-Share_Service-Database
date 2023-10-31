@@ -1,0 +1,38 @@
+How memory is managed in Python
+
+According to the Python memory management documentation, Python has a private heap that stores our program’s objects and data structure
+
+in Python, dynamic memory allocation is handled by the language itself and is not something you need to explicitly manage as you would in languages like C or C++. Python uses a mechanism called automatic memory management or garbage collection. This means that Python takes care of allocating memory for objects you create and frees that memory when it is no longer needed.
+
+Python developers have designed it to eliminate the need for manual garbage collection. 
+
+dig deeper
+
+When you create an object, whether it's a variable, list, dictionary, or any other data structure, Python automatically allocates memory to store the object and its data.
+
+
+Garbage Collection:it  is responsible for reclaiming memory that is no longer being used by any part of your program. It identifies objects with a reference count of zero and releases the memory associated with those objects.
+
+Reference Counting: Python uses reference counting to keep track of how many references there are to each object. When an object's reference count drops to zero, it means the object is no longer in use, and Python's garbage collector can free the memory associated with that object.
+
+Python has standard libraries like ctypes and cffi that allow you to work with external libraries written in languages like C and C++ that do require explicit memory allocation and deallocation.
+
+
+There are two types of memory allocation in Python, static and dynamic.
+
+
+1. static
+
+The stack data structure provides static memory allocation, meaning the variables are in the stack memory. as the name implies,they are permanent; this means that they must be allocated in advance and persist for the duration of the program.
+
+x = 20
+y = [] 
+z = "" 
+
+
+
+2. dynamic
+
+it uses heap data structures in its core implying that variables are in the heap memory. As the name suggests, dynamically allocated variables are not permanent and can be changed while a program is running.
+
+In general, you don't need to worry about manual memory allocation in Python, as the language takes care of most memory management tasks for you. However, it's essential to be aware of memory usage and potential memory leaks in your code. You can use tools like memory profilers and monitoring tools to identify have a eye on it 

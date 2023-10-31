@@ -1,0 +1,36 @@
+What is Normalization?
+Normalization is the process of organizing the data in the database.
+is used to minimize the redundancy from a relation or set of relations. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
+
+Normalization divides the larger table into smaller and links them using relationships.
+
+1nf 
+
+Data Integrity or atomic values
+Simplicity
+
+
+2nf
+
+Eliminating Partial Dependencies:ensuring that all non-key attributes depend on the entire primary key, you avoid redundancy and data anomalies.
+
+Simplifying Querying:
+It helps avoid complex joins and calculations due to redundant data.
+
+
+3nf
+
+Eliminating Transitive Dependencies: 
+ensures data integrity and reduces the risk of update anomalies.
+
+Improving Maintainability: 
+ making it easier to update, modify, and extend the database without introducing anomalies or inconsistencies.
+
+A stronger definition of 3NF is known as Boyce Codd's normal form.
+
+
+Disadvantages of Normalization
+You cannot start building the database before knowing what the user needs.
+The performance degrades when normalizing the relations to higher normal forms, i.e., 4NF, 5NF.
+It is very time-consuming and difficult to normalize relations of a higher degree.
+
