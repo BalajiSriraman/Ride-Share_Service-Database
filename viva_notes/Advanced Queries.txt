@@ -1,0 +1,68 @@
+1. What is a SQL Join
+
+A SQL Join is a clause used to combine rows from two or more tables based on a related column between them.
+
+ It's essential in database management because it allows us to retrieve data from multiple tables simultaneously, creating meaningful 
+ 
+Joins help avoid data duplication and maintain data integrity, which is crucial in relational database systems
+
+
+2. different types of SQL Joins 
+
+
+INNER JOIN: An INNER JOIN returns only the matching rows from both tables.
+
+LEFT JOIN (or LEFT OUTER JOIN): A LEFT JOIN returns all rows from the left table and the matched rows from the right table. If there's no match, it returns NULL values for right table columns.
+
+RIGHT JOIN (or RIGHT OUTER JOIN): A RIGHT JOIN is similar to a LEFT JOIN but returns all rows from the right table and the matched rows from the left table.
+
+FULL JOIN (or FULL OUTER JOIN): A FULL JOIN returns all rows from both tables, with NULL values where there is no match.
+
+3.  What is a SQL Subquery
+
+is a query nested within another query.
+
+ It can be used to retrieve data from one or more tables, and the result of the subquery can be used within the WHERE clause 
+
+ Subqueries are useful for complex filtering and for retrieving data
+ based on the results of another query.
+
+4. Difference between a correlated subquery and a non-correlated subquery
+
+
+A non-correlated subquery is an independent subquery that can be executed on its own and returns a single value or a set of values that can be used in the main query. It doesn't depend on the outer query for its results.
+
+
+Correlated Subquery: A correlated subquery is a subquery that is dependent on the outer query. It references columns from the outer query, and its results are influenced by the rows processed in the main query. It is executed for each row in the main query.
+
+
+-----------------------------------------
+
+simple query 
+
+This query will join the "Ride," "User," "Driver," and "Payment" tables to retrieve the user name, driver name, and payment amount for each ride where there is a matching record in the "Payment" table. If a ride does not have a corresponding payment record, it won't be included in the result.
+
+
+R," "U," and "D" are table aliases used to represent the tables in the query. Table aliases are used to make SQL queries more readable and concise, especially when dealing with multiple tables in complex queries.
+
+when will i get null ?
+ChatGPT
+In the SQL query provided to retrieve ride details, you will get NULL values in the result when Data Missing
+
+
+
+complex query 
+
+We start with the "Ride" table 
+
+We join the "User" table to get user details, using the UserId from the "Ride" table to link the two.
+
+We join the "Driver" table
+to get driver details, using the DriverId from the "Ride" table to link to the driver.
+
+then We use a LEFT JOIN to connect the "Payment" table  based on the RiderId, allowing us to retrieve payment information if it exists for a ride.
+
+then We select the relevant columns, ride ID, user name and email, driver name, payment status, and amount.
+
+This query will provide details of rides along with the details if available. If there is no payment information for a ride, it will still appear in the result with NULL values in the payment-related columns.
+

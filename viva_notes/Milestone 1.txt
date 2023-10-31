@@ -1,0 +1,30 @@
+Primary Key: A unique identifier for each record in a database table, ensuring data integrity and enabling efficient data retrieval.
+
+Attribute: A characteristic property of an entity in a database, such as a column in a table representing specific data
+
+Multivalued Attribute: An attribute that can have multiple values for a single entity, often represented as a set or list of values.
+
+Foreign Key: A field in one table that establishes a link to the primary key of another table, creating relationships between tables in a database.
+
+Derived Attribute: An attribute whose value is calculated or derived from other attributes in the database, typically not stored but computed on-the-fly.
+
+Relationship: Defines how entities in a database are connected or associated, such as one-to-one, one-to-many, or many-to-many relationships between tables.
+
+
+Cardinality in a database relationship specifies how many instances of one entity are related to another; for example, "one-to-many" means one entity connects to multiple instances of another. It defines the quantity and nature of connections in a database schema.
+
+
+diagrams are used to analyze existing databases to find and resolve problems in logic or deployment
+
+
+
+Data Visualization: ER diagrams are like maps that show how different parts of your data connect, making it easy for everyone to see how everything fits together in your database.
+
+Database Design: They help you plan and build your database step by step, like drawing a blueprint before building a house, so you know where everything goes.
+
+Communication: ER diagrams are like a shared language that helps different people understand and talk about the database, whether they're business folks, programmers, or users.
+
+Normalization: ER diagrams help organize your data neatly, so you don't store the same information in many places, making it easier to manage and use.
+
+Data Integrity and Consistency: They make sure your data stays accurate and trustworthy by setting rules that prevent mistakes and keep everything in order.
+

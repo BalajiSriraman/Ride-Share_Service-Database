@@ -1,0 +1,26 @@
+1.  What are DML commands, and what is their primary purpose in a database?
+
+DML commands stand for Database Manipulation Language commands, are a subset of SQL used to manage data stored in a database.
+
+The primary purpose of DML commands is to perform operations that modify, retrieve, and manipulate data within a database. They enable us to insert, update, delete, and retrieve data from database tables.
+
+
+2.  How do DML commands differ from Data Definition Language (DDL) commands?
+
+
+DML commands are distinct from Data Definition Language (DDL) commands in that they deal with the manipulation of data within tables, while DDL commands are concerned with the structure of the database itself. DML commands are used for tasks like inserting, updating, deleting, and retrieving data, as we discussed earlier. In contrast, DDL commands are used for defining, altering, and managing the structure of the database, including creating, modifying, or deleting tables, indexes, and constraints.
+
+
+3. DML commands
+
+Certainly. There are four fundamental DML commands
+
+INSERT: The INSERT command is used to add new rows (records) into a database table
+
+UPDATE: The UPDATE command is used to modify existing data within a database table. You specify the table name, the columns to update, and the new values. 
+
+DELETE: The DELETE command is used to remove rows from a table. You specify the table name and a condition that identifies which rows to delete.
+
+SELECT: While technically a query command, SELECT is also considered a DML command because it retrieves data. It allows you to retrieve data from one or more tables and specify the columns and conditions for the retrieval.
+
+
