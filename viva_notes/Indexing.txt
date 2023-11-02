@@ -1,10 +1,24 @@
 1. What is indexing in SQL
 
-ndexing is a database optimization technique used to improve the speed of data retrieval operations on tables. It involves creating data structures (indexes) that store a subset of the table's columns in a more compact and sorted format. These indexes help the database management system (DBMS) quickly locate and access specific rows in a table. Indexing is crucial because it significantly reduces query execution time, making database operations more efficient.
+indexing is a database optimization technique is used to improve the speed of data retrieval operations on tables.
+
+It involves creating data structures (indexes) that store a subset of the table's columns in a more compact and sorted format.
+
+These indexes help the database management system quickly locate and access specific rows in a table. 
+
+Indexing is crucial because it significantly reduces query execution time, making database operations more efficient.
 
 2. basic structure of an index in SQL
 
-an index consists of two primary components: the index key and a pointer to the actual data rows. The index key is made up of one or more columns from the table, and it is stored in a sorted order. This key is what the DBMS uses to locate data quickly. The pointer in the index, often called a "row identifier" or "record locator," points to the location of the actual data row in the table.
+an index consists of two primary components: 
+
+the index key 
+and 
+a pointer to the actual data rows.
+
+The index key is made up of one or more columns from the table, and it is stored in a sorted order.
+
+This key is what the DBMS uses to locate data quickly. The pointer in the index is called a "row identifier that points to the location of the actual data row in the table.
 
 3. different types of indexes in SQL
 
