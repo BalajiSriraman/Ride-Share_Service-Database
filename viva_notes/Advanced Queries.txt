@@ -66,3 +66,29 @@ then We select the relevant columns, ride ID, user name and email, driver name, 
 
 This query will provide details of rides along with the details if available. If there is no payment information for a ride, it will still appear in the result with NULL values in the payment-related columns.
 
+
+--------------------------------------------------------------------------------------------------------------
+
+Subquery Explanation:
+A subquery (also known as a nested query or inner query) is a query that is embedded within another query. It is used to retrieve data necessary for the main query. Subqueries are enclosed in parentheses and can be used in various parts of a SQL statement, such as the SELECT, FROM, WHERE, or HAVING clauses. Subqueries can return a single value or a result set.
+
+Advantages of Subqueries:
+
+Data Retrieval: Subqueries can be used to retrieve data from one table and use it to filter or manipulate data in another table.
+
+Complex Filtering: Subqueries allow you to perform complex filtering and comparison operations within your queries.
+
+Readability: Subqueries can make your SQL queries more readable by breaking down complex tasks into smaller, more manageable steps.
+
+Reuse: Subqueries can be reused in different parts of your SQL statements, reducing redundancy in your code.
+
+
+SELECT
+    D.DriverId,
+    D.Name AS DriverName,
+    D.DriverRating
+FROM Driver D
+WHERE D.DriverRating > (
+    SELECT AVG(DriverRating)
+    FROM Driver
+);
